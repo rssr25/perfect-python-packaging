@@ -16,7 +16,7 @@ setup(
         name= 'helloworld', 
         version='0.0.1', 
         description='Say hello!', 
-        py_modules=["module1"],
+        py_modules=["helloworld"],
         package_dir={'': 'src'},
     ) 
 
