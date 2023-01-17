@@ -25,7 +25,7 @@ Notice that we are using `setuptools` here, which is not a third-party dependenc
 
 `name`: the package name you want people to use when they run the command `pip install name_of_package`
 
-`version`: 0.0.x indicates an unstable version. When you upload a package for the first time you are likely to make mistakes. It is safer to have 0.0.1 for now.
+`version`: `0.0.x` indicates an unstable version. When you upload a package for the first time you are likely to make mistakes. It is safer to have `0.0.1` for now.
 
 `description`: self-explanatory
 
@@ -33,13 +33,19 @@ Notice that we are using `setuptools` here, which is not a third-party dependenc
 
 `package_dir`: tells `setuptools` where our code is.
 
+<br>
+
 4. Let's check if the package has been correctly created. Build the package using `python setup.py bdist_wheel`. You should have the following new stuff.
 
-- `\helloworld\build` directory which contains two more folders. The `build\lib` directory contains our modules.
-- `\helloworld\dist` which constains our python wheel for distribuition.
-- `\src\helloword.egg-info`
+    - `\helloworld\build` directory which contains two more folders. The `build\lib` directory contains our modules.
+    - `\helloworld\dist` which constains our python wheel for distribuition.
+    - `\src\helloword.egg-info`
+
+<br>
 
 5. Check if the package is installing correctly using `pip install -e .` where `.` is the current directory where `setup.py` file is. The `-e` flag prevents the installation of this package in your system Python distribution.
+
+<br>
 
 6. You can now check the installation of the package in your Python interpreter:
 
