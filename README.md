@@ -58,3 +58,16 @@ Hello Rahul!
 ```
 
 Congratulations! You have created your first package which you can upload to the PyPI. However, this guide is about uploading a "perfect" python package. So let's perfect it!
+
+<hr>
+
+## Cleaning up a little
+Let's clean-up our project a little. We see that we have created some files that are not necessary to push on github. Head to [gitignore.io](https://www.gitignore.io) and search for `python`. It will spit out a text that we will put in a `.gitignore` file which does some housekeeping for the files that are not necessary to push on GitHub.
+
+Create a `.gitignore` file for your repository and paste the output of your search on `gioignore.io`.
+
+## License?
+If you are going to publish your code, you need to license it. Without a license we haven't given permission to distribute our code. People can look at it but not copy it yet! So we need a `license.txt` file. If you don't know ins and outs of licenses [ChooseALicense](https://choosealicense.com) is a good place to understand the permissions and restrictions of different licenses.
+
+## Classifiers
+TBC
