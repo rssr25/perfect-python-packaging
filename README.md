@@ -69,5 +69,22 @@ Create a `.gitignore` file for your repository and paste the output of your sear
 ## License?
 If you are going to publish your code, you need to license it. Without a license we haven't given permission to distribute our code. People can look at it but not copy it yet! So we need a `license.txt` file. If you don't know ins and outs of licenses [ChooseALicense](https://choosealicense.com) is a good place to understand the permissions and restrictions of different licenses.
 
-## Classifiers
-TBC
+## Classifier
+We need to set-up some classifiers so that people searching on PyPi can find our package based on a criteria. For example, a programmer searching for some package may write a classifer to search for it to run on Python 3.7, etc. You can provide this information in classifiers.
+
+```python
+setup( 
+    ... #other arguments to setup() :)
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "License :: OSI Approved :: GNU General Public License v2 or later (GPLV2+)!",
+        "Operating System :: OS Independent",
+    ],
+)
+```
+To know more about classifiers, head to [Classifers](https://pypi.org/classifiers). There are a bunch of classifiers, try them and apply all the useful classifiers to your project.
+
+## Documentation
+
