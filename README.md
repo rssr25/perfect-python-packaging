@@ -179,7 +179,7 @@ $ pip install -e .[dev]
 ```
 This is how you install the development dependencies so that you can run the tests. The `.[dev]` says "we are installing the current module with the dev extras".
 
-<p style="text-align: center;"> ---------- A small detour ---------- </p><br>
+<p style="text-align: center;"> ---------- A small detour ---------- </p>
 <b> Question 1: </b> What is the difference between install_requires and extras_requires?
 
 <b>install requires</b>
@@ -201,4 +201,26 @@ It still has a place but it:
 
 <p style="text-align: center;"> ---------- A small detour that ended ---------- </p>
 
-        
+Now we can write tests. Here we use `test_helloworld.py`
+
+```python
+#test_helloworld.py
+def test_helloworld_no_params ():
+    assert say_hello () == "Hello, World!"
+
+def test_helloworld_with_param ():
+    assert say_hello ("Everyone") == "Hello, Everyone!"
+```
+
+To run the test just write `pytest` in console:
+
+```bash
+$ pytest 
+============== test session starts ===========: 
+platform darwin -- Python 3.6.3, pytest-3.7.2, 
+py-1.5.4, pluggy-0.7.1
+rootdir: /path/to/helloworld, inifile:
+collected 2 items
+test_helloworld.py ..                    [100%]
+========= 2 passed in 0.02 seconds ===========
+```
