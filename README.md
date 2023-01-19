@@ -179,7 +179,7 @@ $ pip install -e .[dev]
 ```
 This is how you install the development dependencies so that you can run the tests. The `.[dev]` says "we are installing the current module with the dev extras".
 
-<center> ---------- A small detour ---------- </center>
+<p style="text-align: center;"> ---------- A small detour ---------- </p><br>
 <b> Question 1: </b> What is the difference between install_requires and extras_requires?
 
 <b>install requires</b>
@@ -199,6 +199,6 @@ It still has a place but it:
 - Uses fixed version numbers, eg: requests==2.22.0
 - Is generated with pip freeze > requirements.txt
 
-<center> ---------- A small detour that ended ---------- </center>
+<p style="text-align: center;"> ---------- A small detour that ended ---------- </p>
 
         
