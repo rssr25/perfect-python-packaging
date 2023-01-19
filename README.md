@@ -138,5 +138,67 @@ setup(
     long_description_content_type="text/markdown",
 )
 ```
-        
+
+## Add your Library dependencies
+You must have seen in a lot of python projects there are dependencies that make your project work. You can add the dependencies directly in the `setup()` function like below.
+
+```python
+setup(
+    install_requires = [
+        "blessings ~= 1.7", #this is an example of a dependency
+    ],
+)
+```
+
+Add the dependency in your `setup.py` and check if it installs everything using `pip install -e .`
+
+## Test with `pytest`
+To ensure that everything is working fine, after installation, it makes sense to run some tests. But, we don't have any tests with us and it makes no sense to check every function randomly in your package to make sure the things work.
+
+For testing `pytest` is a good recommendation. But in order to run some tests using `pytest` we need more dependencies. This time they are not library dependencies as discussed in the previous section, but they are <b>development dependencies</b>. 
+
+In order to add these development dependencies in `setup()` function, add them as extras. A lot of people use `requirements.txt` for these development dependencies, well you can directly add them to your package setup.
+
+```python
+setup(
+    ... #previously written stuff
+    extras_require={
+        "dev": [
+            "pytest>=3.7",
+        ],
+    },
+)
+```
+Now we want to tell people how to use it, again we update the `readme.md`.
+
+```markdown
+# Developing Hello World 
+To install helloworld, along with the tools you need to develop and run tests, run the following in your virtualenv:
+
+$ pip install -e .[dev]
+```
+This is how you install the development dependencies so that you can run the tests. The `.[dev]` says "we are installing the current module with the dev extras".
+
+<hr>
+<b> Question 1: </b> What is the difference between install_requires and extras_requires?
+
+<b>install requires</b>
+- is for production dependencies (Flask, Click, Numpy, Pandas)
+- versions should be as relaxed as possible ( >3.0, <4.0 ) to not lock your users.
+
+<b>extras_require</b>
+- is for optional requirements: (Pytest, Mock, Coverage.y)
+- versions should be as specific as possible
+
+<br>
+
+<b>Question 2: </b> What about `requirements.txt`? <br>
+It still has a place but it:
+
+- is for Apps being deployed on machines you control.
+- Uses fixed version numbers, eg: requests==2.22.0
+- Is generated with pip freeze > requirements.txt
+
+<hr>
+
         

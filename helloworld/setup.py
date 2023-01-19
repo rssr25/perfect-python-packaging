@@ -5,4 +5,5 @@ setup(  name= 'helloworld',
         description='Say hello!', 
         py_modules=["helloworld"],
         package_dir={'': 'src'},
+        install_requires = ["blessings ~= 1.7"],
     )
