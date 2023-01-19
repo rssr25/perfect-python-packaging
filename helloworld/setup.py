@@ -6,4 +6,9 @@ setup(  name= 'helloworld',
         py_modules=["helloworld"],
         package_dir={'': 'src'},
         install_requires = ["blessings ~= 1.7"],
+        extras_require={
+            "dev": [
+                "pytest>=3.7",
+            ],
+        },
     )

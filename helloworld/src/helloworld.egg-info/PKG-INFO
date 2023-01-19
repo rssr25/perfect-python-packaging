@@ -5,6 +5,7 @@ Summary: Say hello!
 Home-page: UNKNOWN
 License: UNKNOWN
 Platform: UNKNOWN
+Provides-Extra: dev
 License-File: LICENSE.txt
 
 UNKNOWN
