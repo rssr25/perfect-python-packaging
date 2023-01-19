@@ -87,3 +87,56 @@ setup(
 To know more about classifiers, head to [Classifers](https://pypi.org/classifiers). There are a bunch of classifiers, try them and apply all the useful classifiers to your project.
 
 ## Documentation is your :massage:
+Before we jump onto documenting the code, we need to know in which format you want to write the documentation. There are generally two choices at the moment.
+
+
+|  ReStructured Text | Markdown         |
+|--------------------|------------------|
+| Pythonic           | More widespread  |
+|  Powerful          | Simpler          |
+|  Can use Sphinx    | Can use MkDocs   |
+
+ReStructured Text is written in Python and widely used in the Python community. It is a Python solution. If you have a project that uses code from multiple languages then probably you are more familiar with MarkDown. It is more simpler but also less powerful. Both of these are supported by [readthedocs.org](https://readthedocs.org) :)
+
+Once we have decided from the two choices above, we need to have soem sections in the document that are more or less quite general to any documentation. They are as follows (we use markdown for example here)
+
+1. A `readme.md` file that has:
+    - Title: the title of the project and a small paragraph describing what the project does. 
+
+        ```markdown
+        # Hello World
+        This is an example project demonstrating how to publish a Python module to PyPi.
+        ```
+    - Installation: A section telling how to install the project
+        ```markdown
+        ## Installation
+        Run the following to install:
+           pip install helloworld
+    
+    - Some example code to tell how to use the code
+
+        ```markdown
+        from helloworld import say_hello
+        # Generate "Hello, World!"
+        say_hello ()
+        # Generate "Hello, Everybody!"
+        say_hello("Everybody")
+        ```
+2. Other stuff that you want the developers to pay attention to.
+
+Once we have written this, we would also like to publish this on PyPi. It will be really nice to make this readme.md as the official description of the project on PyPi. Now, PyPi can use markdown directly to incorporate your .md readme(s) directly into the package.
+
+```python
+from setuptools import setup
+
+with open ("READMEmd", "r") as fh:
+    long_description = fh.read ()
+
+setup(
+    ... #other stuff written before
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+)
+```
+        
+        
