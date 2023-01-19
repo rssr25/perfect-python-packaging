@@ -176,6 +176,9 @@ Now we want to tell people how to use it, again we update the `readme.md`.
 To install helloworld, along with the tools you need to develop and run tests, run the following in your virtualenv:
 
 $ pip install -e .[dev]
+
+# for mac use
+$ pip install -e .'[dev]'
 ```
 This is how you install the development dependencies so that you can run the tests. The `.[dev]` says "we are installing the current module with the dev extras".
 
@@ -205,6 +208,7 @@ Now we can write tests. Here we use `test_helloworld.py`
 
 ```python
 #test_helloworld.py
+from helloworld import say_hello
 def test_helloworld_no_params ():
     assert say_hello () == "Hello, World!"
 
