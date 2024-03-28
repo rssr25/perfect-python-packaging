@@ -1,5 +1,5 @@
 # How to package python packages (perfectly).
-This is a text version of the youtube video: [Publishing (Perfect) Python Packages on PyPi](https://www.youtube.com/watch?v=GIF3LaRqgXo)
+This is a text version of the youtube video: [Publishing (Perfect) Python Packages on PyPi](https://www.youtube.com/watch?v=GIF3LaRqgXo) (unfortunately it is not available anymore)
 
 This guide assumes that you have some useful python code that is general enough to publish. :)
 
